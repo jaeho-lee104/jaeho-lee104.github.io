@@ -1,1 +1,1 @@
-developer blog
+blog
