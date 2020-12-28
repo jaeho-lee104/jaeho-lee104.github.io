@@ -1486,29 +1486,22 @@ img {
       }
 
       #avatar {
-        @extend %profile-ml;
-
         > a {
           width: 6.2rem;
           height: 6.2rem;
-          &.mx-auto {
-            margin-left: 0 !important;
-          }
         }
       }
 
       .site-title {
-        @extend %profile-ml;
-        a {
-          font-size: 1.7rem;
-          letter-spacing: 1px;
-        }
+        text-align: center !important;
+        font-size: 1.7rem;
+        letter-spacing: 1px;
       }
 
       .site-subtitle {
-        @extend %profile-ml;
+        text-align: center !important;
         word-spacing: 0;
-        margin-top: 0.3rem;
+        margin-top: 1rem;
       }
 
     } // .profile-wrapper (min-width: 1650px)
