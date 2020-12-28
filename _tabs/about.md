@@ -11,4 +11,4 @@ order: 4
 ---
 
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+> 여러 주제들에 대해 정리할 생각입니다.
