@@ -17,7 +17,18 @@
     static get LIGHT_MODE() { return "light"; }
 
     constructor() {
-      this.setLight();
+      if (this.hasMode) {
+        if (this.isDarkMode) {
+          if (!this.isSysDarkPrefer) {
+            this.setDark();
+          }
+        } else {
+          if (this.isSysDarkPrefer) {
+            this.setLight();
+          }
+        }
+      }
+
       var self = this;
 
       /* always follow the system prefers */
