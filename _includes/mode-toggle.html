@@ -1,10 +1,5 @@
 <!--
   Switch the mode between dark and light.
-
-  v2.1
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2020 Cotes Chung
-  MIT License
 -->
 
 <i class="mode-toggle fas fa-adjust"></i>
@@ -51,8 +46,26 @@
         self.updateMermaid();
       });
 
+      // wait for utterances to load and send it's first message.
+      addEventListener('message', event => {
+        if (event.origin !== 'https://utteranc.es') {
+          return;
+        }
+        self.updateGithubTheme();
+      });
+
     } /* constructor() */
 
+
+
+    updateGithubTheme() {
+      const message = {
+          type: 'set-theme',
+          theme: (this.modeStatus === ModeToggle.DARK_MODE? 'github-dark' : 'github-light')
+        };
+        const utterances = document.querySelector('iframe').contentWindow; // try event.source instead
+        utterances.postMessage(message, 'https://utteranc.es');
+    }
 
     setDark() {
       $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
@@ -134,6 +147,7 @@
       }
 
       this.updateMermaid();
+      this.updateGithubTheme();
 
     } /* flipMode() */
 
