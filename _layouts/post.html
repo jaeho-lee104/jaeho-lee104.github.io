@@ -122,6 +122,10 @@ layout: default
 
     {% include post-nav.html %}
 
+    {% if site.utteranc.comments %}
+      {% include utteranc.html %}
+    {% endif %}
+
     {% if site.disqus.comments and page.comments %}
       {% include disqus.html %}
     {% endif %}
