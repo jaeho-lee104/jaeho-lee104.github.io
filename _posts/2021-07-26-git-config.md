@@ -16,6 +16,7 @@ toc: false
 ## repository 별 name, email 설정
 1. 터미널 열기
 2. git config user.name "NAME"
+  - git config --local user.name "NAME" 과 같음
 3. git config user.email "EMAIL@example.com"
 4. cat .git/config 로 확인
 
