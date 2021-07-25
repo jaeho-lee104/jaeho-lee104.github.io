@@ -60,9 +60,9 @@
     color: var(--link-color);
 
     &:hover {
-      background: #2a408e;
+      background: #006BAB;
       color: #fff;
-      border-color: #2a408e;
+      border-color: #006BAB;
     }
 
     &.disabled {
@@ -144,9 +144,16 @@
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 
-  &.nav-link:not(.active) {
-    color: inherit;
+  border-color: #006BAB;
+
+  &.nav-link.active {
+      color: #006BAB;
   }
+
+  &.nav-link:hover, &.nav-link:focus {
+    color: #006BAB;
+  }
+
 }
 
 /* --- Related Posts --- */
