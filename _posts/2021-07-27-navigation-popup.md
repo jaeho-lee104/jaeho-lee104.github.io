@@ -21,7 +21,7 @@ inclusive 는 true일 경우 지정한 destination까지 pop.
 
 ------
 
-Splash 화면과 같은 일회성 화면에 popUpTo를 적용한 사례다.
+Splash 화면과 같은 일회성 화면에 popUpTo를 적용한 사례
 
 #### nav_graph.xml 에서 코드로 설정하거나
 ![img](/assets/img/post/nav_1.png)
